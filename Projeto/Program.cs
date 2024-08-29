@@ -21,4 +21,9 @@ app.MapGet("/retornar endereco", () =>
     return endereco;
 });
 
+// Criar novas funcionalidades/Endpoints para receber dados.
+// - Pela URL da requisição
+// - Receber corpo da requisição
+//guardar as informações em uma lista
+
 app.Run();
