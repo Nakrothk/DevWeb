@@ -11,4 +11,14 @@ app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/segunda funcionalidade", () => "Segunda Funcionalidade");
 
+app.MapGet("/retornar endereco", () =>
+{
+    dynamic endereco = new
+    {
+        rua = "Praça Osório",
+        numero = 125
+    };
+    return endereco;
+});
+
 app.Run();
