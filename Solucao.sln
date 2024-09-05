@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto", "projeto\Projeto.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{3B86E838-F748-4CBA-89D1-3BEC3E339CD8}"
 	ProjectSection(SolutionItems) = preProject
-		Produto = Produto
+		Produto.cs = Produto.cs
 	EndProjectSection
 EndProject
 Global
