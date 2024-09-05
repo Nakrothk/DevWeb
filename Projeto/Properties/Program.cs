@@ -24,6 +24,11 @@ app.MapGet("/retornar endereco", () =>
 // Criar novas funcionalidades/Endpoints para receber dados.
 // - Pela URL da requisição
 // - Receber corpo da requisição
-//guardar as informações em uma lista
+//guardar as informações em uma lista   
 
 app.Run();
+
+Produto produto = new Produto();
+produto.Preco = 999;
+Console.WriteLine("Preço: " + produto.preco);
+

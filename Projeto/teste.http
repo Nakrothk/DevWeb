@@ -2,3 +2,5 @@
 GET http://localhost:5122
 ### Requisição para a segunda funcionalidade da API
 GET http://localhost:5122
+### Requisição para a terceira funcionalidade da API
+GET http://localhost:5122
