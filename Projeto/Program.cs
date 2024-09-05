@@ -8,16 +8,16 @@ var app = builder.Build();
 //Lista de Produtos
 List<Produto> produtos = new List<Produto>
 {
-            new Produto { Nome = "Produto A", Preco = 10.99m, Quantidade = 5 },
-            new Produto { Nome = "Produto B", Preco = 20.50m, Quantidade = 10 },
-            new Produto { Nome = "Produto C", Preco = 15.75m, Quantidade = 7 },
-            new Produto { Nome = "Produto D", Preco = 8.99m, Quantidade = 12 },
-            new Produto { Nome = "Produto E", Preco = 30.00m, Quantidade = 3 },
-            new Produto { Nome = "Produto F", Preco = 25.00m, Quantidade = 8 },
-            new Produto { Nome = "Produto G", Preco = 12.50m, Quantidade = 6 },
-            new Produto { Nome = "Produto H", Preco = 22.75m, Quantidade = 9 },
-            new Produto { Nome = "Produto I", Preco = 18.00m, Quantidade = 4 },
-            new Produto { Nome = "Produto J", Preco = 5.99m, Quantidade = 15 }
+            new Produto { Nome = "Agua", Preco = 10.99m, Quantidade = 5 },
+            new Produto { Nome = "Camiseta", Preco = 20.50m, Quantidade = 10 },
+            new Produto { Nome = "Pirulito", Preco = 15.75m, Quantidade = 7 },
+            new Produto { Nome = "Bala", Preco = 8.99m, Quantidade = 12 },
+            new Produto { Nome = "Tenis", Preco = 30.00m, Quantidade = 3 },
+            new Produto { Nome = "Celular", Preco = 25.00m, Quantidade = 8 },
+            new Produto { Nome = "Amoeba", Preco = 12.50m, Quantidade = 6 },
+            new Produto { Nome = "Chocolate", Preco = 22.75m, Quantidade = 9 },
+            new Produto { Nome = "Boné", Preco = 18.00m, Quantidade = 4 },
+            new Produto { Nome = "Meia", Preco = 5.99m, Quantidade = 15 }
         };
 
 //Endpoints - Funcionalidade
@@ -31,16 +31,19 @@ app.MapGet("/produto/listar", () =>
 });
 
 //GET: http://localhost:5122/produto/cadastrar
-app.MapGet("/produto/cadastrar", () => 
+app.MapGet("/produto/cadastrar/{nome}", (string nome) => 
 {
+    Produto produto = new Produto();
+    produto.Nome =nome;
+    produto.Add(produto);    
     return produtos;
 });
 
 
 // Criar novas funcionalidades/Endpoints para receber dados.
-// - Pela URL da requisição
+// - Corpo da requisição
 // - Receber corpo da requisição
-//guardar as informações em uma lista   
+  
 
 app.Run();
 
